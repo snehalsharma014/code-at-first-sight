@@ -1,3 +1,11 @@
+
+
+
+
+
+
+
+
 # FeelBetter.AI - Wellness Dashboard
 
 A beautiful, interactive wellness dashboard that provides personalized suggestions based on your current mood. Built with modern web technologies and featuring AI-like behavior through intelligent rule-based responses.
