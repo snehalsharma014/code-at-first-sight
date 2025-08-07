@@ -1,9 +1,4 @@
-
-
-
-
-
-
+![Dashboard Screenshot](image.png)
 
 
 # FeelBetter.AI - Wellness Dashboard
