@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FeelBetter.AI - Your AI Wellness Companion</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Landing Page -->
+        <div id="landingPage" class="page active">
+            <div class="hero-section">
+                <div class="logo-container">
+                    <div class="logo">
+                        <i class="fas fa-heart-pulse"></i>
+                        <h1>FeelBetter.AI</h1>
+                    </div>
+                    <p class="tagline">Your AI-powered pocket companion for better moods, mindfulness, and mental clarity.</p>
+                </div>
+                
+                <div class="login-portal">
+                    <div class="login-card">
+                        <h2>Welcome Back</h2>
+                        <p>Sign in to continue your wellness journey</p>
+                        
+                        <form id="loginForm" class="login-form">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" required placeholder="Enter your email">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" id="password" required placeholder="Enter your password">
+                            </div>
+                            
+                            <button type="submit" class="login-btn">
+                                <i class="fas fa-sign-in-alt"></i>
+                                Sign In
+                            </button>
+                        </form>
+                        
+                        <div class="divider">
+                            <span>or</span>
+                        </div>
+                        
+                        <button id="guestLogin" class="guest-btn">
+                            <i class="fas fa-user-clock"></i>
+                            Continue as Guest
+                        </button>
+                        
+                        <p class="signup-link">
+                            Don't have an account? <a href="#" id="showSignup">Sign up</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sign Up Page -->
+        <div id="signupPage" class="page">
+            <div class="signup-container">
+                <div class="back-btn" onclick="showPage('landingPage')">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Login
+                </div>
+                
+                <div class="signup-card">
+                    <h2>Create Account</h2>
+                    <p>Join FeelBetter.AI and start your wellness journey</p>
+                    
+                    <form id="signupForm" class="signup-form">
+                        <div class="form-group">
+                            <label for="signupName">Full Name</label>
+                            <input type="text" id="signupName" required placeholder="Enter your full name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="signupEmail">Email</label>
+                            <input type="email" id="signupEmail" required placeholder="Enter your email">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="signupPassword">Password</label>
+                            <input type="password" id="signupPassword" required placeholder="Create a password">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm Password</label>
+                            <input type="password" id="confirmPassword" required placeholder="Confirm your password">
+                        </div>
+                        
+                        <button type="submit" class="signup-btn">
+                            <i class="fas fa-user-plus"></i>
+                            Create Account
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Personal Details Page -->
+        <div id="personalDetailsPage" class="page">
+            <div class="details-container">
+                <div class="progress-bar">
+                    <div class="progress-step active">1</div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step">2</div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step">3</div>
+                </div>
+                
+                <div class="details-card">
+                    <h2>Tell Us About Yourself</h2>
+                    <p>Help us personalize your wellness experience</p>
+                    
+                    <form id="personalDetailsForm" class="details-form">
+                        <div class="form-section">
+                            <h3>Basic Information</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="age">Age</label>
+                                    <input type="number" id="age" min="13" max="120" required placeholder="Your age">
+                                </div>
+                                <div class="form-group">
+                                    <label for="gender">Gender</label>
+                                    <select id="gender" required>
+                                        <option value="">Select gender</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                        <option value="other">Other</option>
+                                        <option value="prefer-not">Prefer not to say</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h3>Health & Wellness</h3>
+                            <div class="form-group">
+                                <label>How would you rate your current stress level?</label>
+                                <div class="rating-group">
+                                    <input type="radio" id="stress1" name="stressLevel" value="1" required>
+                                    <label for="stress1">1 - Low</label>
+                                    <input type="radio" id="stress2" name="stressLevel" value="2">
+                                    <label for="stress2">2</label>
+                                    <input type="radio" id="stress3" name="stressLevel" value="3">
+                                    <label for="stress3">3</label>
+                                    <input type="radio" id="stress4" name="stressLevel" value="4">
+                                    <label for="stress4">4</label>
+                                    <input type="radio" id="stress5" name="stressLevel" value="5">
+                                    <label for="stress5">5 - High</label>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>What are your main wellness goals? (Select all that apply)</label>
+                                <div class="checkbox-group">
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="goal1" name="wellnessGoals" value="reduce-stress">
+                                        <label for="goal1">Reduce stress and anxiety</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="goal2" name="wellnessGoals" value="improve-sleep">
+                                        <label for="goal2">Improve sleep quality</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="goal3" name="wellnessGoals" value="increase-energy">
+                                        <label for="goal3">Increase energy levels</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="goal4" name="wellnessGoals" value="better-mood">
+                                        <label for="goal4">Improve overall mood</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="goal5" name="wellnessGoals" value="mindfulness">
+                                        <label for="goal5">Develop mindfulness practice</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="meditationExperience">Do you have experience with meditation?</label>
+                                <select id="meditationExperience" required>
+                                    <option value="">Select experience level</option>
+                                    <option value="none">No experience</option>
+                                    <option value="beginner">Beginner (less than 6 months)</option>
+                                    <option value="intermediate">Intermediate (6 months - 2 years)</option>
+                                    <option value="advanced">Advanced (2+ years)</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h3>Preferences</h3>
+                            <div class="form-group">
+                                <label>What types of activities do you enjoy?</label>
+                                <div class="checkbox-group">
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="activity1" name="preferredActivities" value="physical">
+                                        <label for="activity1">Physical exercise</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="activity2" name="preferredActivities" value="creative">
+                                        <label for="activity2">Creative activities</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="activity3" name="preferredActivities" value="social">
+                                        <label for="activity3">Social activities</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="activity4" name="preferredActivities" value="nature">
+                                        <label for="activity4">Nature and outdoors</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="activity5" name="preferredActivities" value="quiet">
+                                        <label for="activity5">Quiet, solitary activities</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="continue-btn">
+                            <i class="fas fa-arrow-right"></i>
+                            Continue to Dashboard
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dashboard Page -->
+        <div id="dashboardPage" class="page">
+            <header class="dashboard-header">
+                <div class="user-info">
+                    <div class="user-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="user-details">
+                        <h3 id="userName">Welcome!</h3>
+                        <p>Ready to feel better?</p>
+                    </div>
+                </div>
+                <div class="header-actions">
+                    <button class="settings-btn" onclick="wellnessApp.showSettings()">
+                        <i class="fas fa-cog"></i>
+                        Settings
+                    </button>
+                    <button class="logout-btn" onclick="logout()">
+                        <i class="fas fa-sign-out-alt"></i>
+                        Logout
+                    </button>
+                </div>
+            </header>
+
+            <main class="dashboard-content">
+                <div class="mood-section">
+                    <h2>How are you feeling today?</h2>
+                    <div class="mood-input-container">
+                        <input 
+                            type="text" 
+                            id="moodInput" 
+                            placeholder="e.g., tired, anxious, happy, stressed..."
+                            class="mood-input"
+                        >
+                        <button id="getSuggestion" class="suggestion-btn">
+                            <i class="fas fa-magic"></i>
+                            Get Suggestions
+                        </button>
+                    </div>
+                    
+                    <div class="quick-moods">
+                        <span class="quick-mood" data-mood="tired">😴 Tired</span>
+                        <span class="quick-mood" data-mood="anxious">😰 Anxious</span>
+                        <span class="quick-mood" data-mood="stressed">😤 Stressed</span>
+                        <span class="quick-mood" data-mood="sad">😢 Sad</span>
+                        <span class="quick-mood" data-mood="happy">😊 Happy</span>
+                        <span class="quick-mood" data-mood="energetic">⚡ Energetic</span>
+                    </div>
+                </div>
+
+                <div class="suggestions-section" id="suggestionsSection" style="display: none;">
+                    <h3>Your Personalized Wellness Plan</h3>
+                    <div class="suggestions-grid">
+                        <div class="suggestion-card activity-card">
+                            <div class="card-header">
+                                <i class="fas fa-running"></i>
+                                <h4>Activity</h4>
+                            </div>
+                            <p id="activityText" class="suggestion-text"></p>
+                        </div>
+                        
+                        <div class="suggestion-card tip-card">
+                            <div class="card-header">
+                                <i class="fas fa-lightbulb"></i>
+                                <h4>Tip</h4>
+                            </div>
+                            <p id="tipText" class="suggestion-text"></p>
+                        </div>
+                        
+                        <div class="suggestion-card meditation-card">
+                            <div class="card-header">
+                                <i class="fas fa-om"></i>
+                                <h4>Meditation</h4>
+                            </div>
+                            <p id="meditationText" class="suggestion-text"></p>
+                        </div>
+                    </div>
+                    
+                    <div class="suggestion-actions">
+                        <div class="ai-indicator">
+                            <i class="fas fa-robot"></i>
+                            <span>AI-Powered Suggestions</span>
+                        </div>
+                        <div class="action-buttons">
+                            <button id="refreshSuggestions" class="action-btn">
+                                <i class="fas fa-sync-alt"></i>
+                                Get New Suggestions
+                            </button>
+                            <button id="saveSuggestions" class="action-btn">
+                                <i class="fas fa-bookmark"></i>
+                                Save This Plan
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="saved-plans-section">
+                    <h3>Saved Wellness Plans</h3>
+                    <div id="savedPlans" class="saved-plans-container">
+                        <p class="no-plans">No saved plans yet. Get your first suggestions!</p>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
